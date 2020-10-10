@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"></link>
+    <title>Tetris</title>
+  </head>
+
+  <body>
+    <div id="main">
+      <div class="container">
+        <div class="container-inner">
+          <h1 class="main-title">Tetris</h1>
+          <div class="counter">
+            <span class="counter-nmb">3</span>
+          </div>
+          <div class="logo">
+            <img src="src/tetris-logo.png" class="logo-img" title="Tetris" alt="Tetris Logo" />
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="popup popup-game-over hide">
+                <div class="popup-inner">
+                  <div class="popup-text">
+                    Game over!
+                  </div>
+                </div>
+              </div>
+              <div class="popup popup-game-win hide">
+                <div class="popup-inner">
+                  <div class="popup-text greenish">
+                    Great job!
+                  </div>
+                </div>
+              </div>
+              <div class="board-wrap">
+                <div class="board-grid"></div>
+                <canvas id="board" class="game-board"></canvas>
+              </div>
+            </div>
+            <div class="col">
+              <div class="next-shape">
+                <p class="subtitle purple">
+                  Next:
+                </p>
+                <div class="board-wrap board-wrap-small board-align-right">
+                  <div class="board-grid"></div>
+                  <canvas id="nextShapeBoard" class="next-shape-board"></canvas>
+                </div>
+              </div>
+              <div class="hold-shape">
+                <p class="subtitle greenish">
+                  Hold:
+                </p>
+                <div class="board-wrap board-wrap-small">
+                  <div class="board-grid"></div>
+                  <canvas id="holdShapeBoard" class="hold-shape-board"></canvas>
+                </div>
+              </div>
+              <div class="buttons-wrap">
+                <button type="button" class="button play-button"><i class="fa fa-play"></i></button>
+                <button type="button" class="button pause-button"><i class="fa fa-pause"></i></button>
+                <button type="button" class="button restart-button"><i class="fa fa-retweet"></i></button>
+                <button type="button" class="button music-button active">
+                  <i class="fa fa-volume-up"></i>
+                  <i class="fa fa-volume-off"></i>
+                </button>
+              </div>
+              <div class="mode">
+                <div class="field">
+                  <p class="field-title yellow">
+                    Mode: <span class="field-text">Marathon</span>
+                  </p>
+                </div>
+              </div>
+              <div class="dashboard">
+                <div class="field game-score">
+                  <div class="field-title red">
+                    <span class="field-label">Score:</span> <span class="game-score-nmb">1</span>
+                  </div>
+                </div>
+                <div class="field game-lines">
+                  <div class="field-title blue">
+                    <span class="field-label">Lines:</span> <span class="game-lines-nmb">1</span>
+                  </div>
+                </div>
+                <div class="field game-level">
+                  <div class="field-title green">
+                    <span class="field-label">Level:</span> <span class="game-level-nmb">1</span>
+                  </div>
+                </div>
+                <div class="field game-time">
+                  <div class="field-title yellow">
+                    <span class="field-label">Time:</span> <span class="game-time-nmb">
+                      <span class="time-hours">0</span>:<span class="time-minutes">0</span>:<span class="time-seconds">0</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            <div class="notice">
+              Tetris © 1985~2020 Tetris Holding. Tetris logos, Tetris theme song and Tetriminos are trademarks of Tetris Holding. The Tetris trade dress is owned by Tetris Holding. Licensed to The Tetris Company. Tetris Game Design by Alexey Pajitnov. Tetris Logo Design by Roger Dean. All Rights Reserved.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="data.js" type="text/javascript"></script>
+    <script type="module" src="shapes.js" type="text/javascript"></script>
+    <script type="module" src="board.js" type="text/javascript"></script>
+    <script type="module" src="helpers.js" type="text/javascript"></script>
+    <script type="module" src="my_tetris.js" type="text/javascript"></script>
+  </body>
+</html>
